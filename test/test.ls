@@ -2,7 +2,7 @@ expect = chai.expect
 describe 'leaflet-tw', ->
   describe 'is compatable with WMTS.', -> ``it``
     .. 'sould able to get avaliable titles.', (done) ->
-      titles <- avaliable-titles \http://gis.sinica.edu.tw/tainan/wmts//1.0.0/WMTSCapabilities.xml
-      expect titles.tainan_1875 .to.deep.equal do
-        name: '臺灣府城街道圖'
+      result <- avaliable-titles \http://gis.sinica.edu.tw/tainan/wmts//1.0.0/WMTSCapabilities.xml
+      expect result.count .to.equal 49
+      expect result.tiles.am50k_1944.name .to.equal '1944-美軍地形圖-1:50,000'
       done!

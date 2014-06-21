@@ -1,6 +1,22 @@
 
 export function avaliable-titles(url, done)
-  result = do
-    tainan_1875:
-      name: '臺灣府城街道圖'
-  done result
+  get = (node, q)->
+    $ node .children q
+  result = {count:0, tiles: {}}
+  $.ajax do
+    type: \GET
+    dataType: \xml
+    url: url
+    success: (xml) ->
+      layers = $ xml .find \Layer
+      layers.each (idx)->
+        id = get @, "ows\\:Identifier" .text!
+        name = get @, "ows\\:Title" .text!
+        format = get @, \Format .text!
+        url = get @, \ResourceURL .attr \template
+        result['tiles'][id.toLowerCase!] = do
+          name: name
+          format: format
+          url: url
+      result.count = layers.length
+      done result
