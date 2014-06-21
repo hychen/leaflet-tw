@@ -7,13 +7,13 @@ export function avaliable-titles(url, done)
   get = (o, q)->
     $ o .children q
   layers = $ \Layer
-  result = {count: layers.length, tiles: {}}
+  result = {count: layers.length, titles: {}}
   layers.each (idx)->
     id = get @, "ows\\:Identifier" .text!
     name = get @, "ows\\:Title" .text!
     format = get @, \Format .text! .replace 'image/', ''
     url = get @, \ResourceURL .attr \template
-    result['tiles'][id] = do
+    result['titles'][id] = do
       id: id
       name: name
       format: format
