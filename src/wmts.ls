@@ -3,10 +3,11 @@ require! cheerio
 
 export function avaliable-titles(url, done)
   err, res, body <- request url
-  $ = cheerio.load body, {+xmlMode}
+  done err, {count:0, titles:{}} if err
+  c = cheerio.load body, {+xmlMode}
   get = (o, q)->
-    $ o .children q
-  layers = $ \Layer
+    c o .children q
+  layers = c \Contents .find \Layer
   result = {count: layers.length, titles: {}}
   layers.each (idx)->
     id = get @, "ows\\:Identifier" .text!
@@ -18,4 +19,4 @@ export function avaliable-titles(url, done)
       name: name
       format: format
       url: url
-  done result
+  done err, result
