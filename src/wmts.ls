@@ -14,7 +14,7 @@ export function avaliable-titles(url, done)
         name = get @, "ows\\:Title" .text!
         format = get @, \Format .text! .replace 'image/', ''
         url = get @, \ResourceURL .attr \template
-        result['tiles'][id.toLowerCase!] = do
+        result['tiles'][id] = do
           name: name
           format: format
           url: url
