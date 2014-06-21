@@ -9,6 +9,6 @@ describe 'leaflet-tw', ->
       expect result.titles.AM50K_1944.format .to.equal 'png'
       expect result.titles.AM50K_1944.lower-corner.long .to.equal '117.84953432'
       expect result.titles.AM50K_1944.lower-corner.lat .to.equal '21.65607265'
-      expect result.titles.AM50K_1944.upper-corner.long .to.equal '117.84953432'
-      expect result.titles.AM50K_1944.lower-corner.lat .to.equal '21.65607265'
+      expect result.titles.AM50K_1944.upper-corner.long .to.equal '123.85924109'
+      expect result.titles.AM50K_1944.upper-corner.lat .to.equal '25.64233621'
       done!
