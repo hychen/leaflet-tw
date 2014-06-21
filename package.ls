@@ -23,7 +23,7 @@ scripts:
   """
 engines: {node: '*'}
 dependencies:
-  cheerio: \0.13.x
+  cheerio: \0.17.x
   request: \2.34.x
 devDependencies:
   testem: \0.6.x
