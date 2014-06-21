@@ -12,7 +12,7 @@ export function avaliable-titles(url, done)
       layers.each (idx)->
         id = get @, "ows\\:Identifier" .text!
         name = get @, "ows\\:Title" .text!
-        format = get @, \Format .text!
+        format = get @, \Format .text! .replace 'image/', ''
         url = get @, \ResourceURL .attr \template
         result['tiles'][id.toLowerCase!] = do
           name: name
