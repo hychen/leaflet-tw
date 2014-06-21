@@ -1,4 +1,7 @@
-require! request
+if process.browser
+  request = require \browser-request
+else
+  request = require \request
 require! cheerio
 
 export function avaliable-titles(url, done)

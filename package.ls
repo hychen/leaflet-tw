@@ -24,7 +24,7 @@ scripts:
 engines: {node: '*'}
 dependencies:
   cheerio: \0.17.x
-  request: \2.34.x
+  request: \1.x.x
 devDependencies:
   testem: \0.6.x
   mocha: \1.14.x
