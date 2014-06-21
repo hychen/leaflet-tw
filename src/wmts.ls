@@ -14,6 +14,7 @@ export function avaliable-titles(url, done)
     format = get @, \Format .text! .replace 'image/', ''
     url = get @, \ResourceURL .attr \template
     result['tiles'][id] = do
+      id: id
       name: name
       format: format
       url: url
