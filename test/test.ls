@@ -7,4 +7,8 @@ describe 'leaflet-tw', ->
       expect result.count .to.equal 49
       expect result.titles.AM50K_1944.name .to.equal '1944-美軍地形圖-1:50,000'
       expect result.titles.AM50K_1944.format .to.equal 'png'
+      expect result.titles.AM50K_1944.lower-corner.long .to.equal '117.84953432'
+      expect result.titles.AM50K_1944.lower-corner.lat .to.equal '21.65607265'
+      expect result.titles.AM50K_1944.upper-corner.long .to.equal '117.84953432'
+      expect result.titles.AM50K_1944.lower-corner.lat .to.equal '21.65607265'
       done!
