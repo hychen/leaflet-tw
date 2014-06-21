@@ -3,7 +3,8 @@
     "before_tests":"npm run prepublish & lsc -c test/*.ls",
     "after_tests": "rm test/*.js",
     "src_files":[
-      "src/*.ls"
+      "src/*.ls",
+      "test/*.ls"
     ],
     "serve_files":[
       "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js",
