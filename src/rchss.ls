@@ -150,8 +150,8 @@ layers = do
     'Tainan_aerialphoto_2000':
       name: '臺南市舊航照影像(2000)'
       ext: \jpg
-    'Tainan_aerialphoto_2001':
-      name: '臺南市舊航照影像(2001)'
+    'Tainan_aerialphoto_2011':
+      name: '臺南市舊航照影像(2011)'
       ext: \jpg
     'chianan_100K_1933':
       name: '嘉南大圳平圖(1933)'
