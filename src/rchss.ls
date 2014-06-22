@@ -155,6 +155,8 @@ layers = do
       ext: \jpg
     'chianan_100K_1933':
       name: '嘉南大圳平圖(1933)'
+    'chianan_100K_1978':
+      name: '嘉南農田水利會灌溉區域平面圖'
     'chianan_100K_1995':
       name: '嘉南農田水利會灌溉區域平面圖(1995)'
     'chianan_200K_1959':
