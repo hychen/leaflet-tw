@@ -97,6 +97,8 @@ layers = do
       name: '臺南市全圖(1920)'
     'Tainan_1924': do
       name: '臺南市全圖(1924)'
+    'Tainan_1924B': do
+      name: '臺南市全圖(1924B)'
     'Tainan_1935': do
       name: '臺南市街圖(1935)'
     'Tainan_1936': do
